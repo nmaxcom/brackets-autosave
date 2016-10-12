@@ -8,7 +8,7 @@ define(function (require, exports, module) {
     
     // the interval for which nothing should be changed to cause a save action
     // so if you type something every AUTOSAVE_INTERVAL seconds, the document will not be saved
-    var AUTOSAVE_INTERVAL = 3 * 1000; // 3s
+    var AUTOSAVE_INTERVAL = 200;
     
     
     var wsURI = "ws://localhost:1235";
@@ -95,6 +95,6 @@ define(function (require, exports, module) {
     }
     
     AppInit.appReady(function () {
-        window.setInterval(checkForChanges, AUTOSAVE_INTERVAL); // autosave every 3 seconds
+        window.setInterval(checkForChanges, AUTOSAVE_INTERVAL); // autosave
     });
 });
